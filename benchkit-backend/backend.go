@@ -21,11 +21,12 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
-	cfg "github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
 	"net/http"
 	"strings"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j"
+	cfg "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/config"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/log"
 )
 
 var ctx = context.Background()
