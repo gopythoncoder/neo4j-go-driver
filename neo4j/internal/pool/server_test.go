@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/testutil"
 )
 
 func closeConnection(ctx context.Context, conn db.Connection) {

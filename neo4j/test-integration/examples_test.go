@@ -21,13 +21,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/dbtype"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/config"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/dbtype"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
 )
 
 //lint:file-ignore U1000 Ignore all unused code, it's included in the driver manual

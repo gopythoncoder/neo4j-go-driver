@@ -25,16 +25,16 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/auth"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	iauth "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/boltagent"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/packstream"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/telemetry"
-	itime "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/time"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/auth"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/db"
+	iauth "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/auth"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/boltagent"
+	idb "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/packstream"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/telemetry"
+	itime "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/time"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/log"
 )
 
 const (
@@ -952,7 +952,7 @@ func (b *bolt5) Close(ctx context.Context) {
 		b.queue.send(ctx)
 	}
 	if err := b.conn.Close(); err != nil {
-		b.log.Warnf(log.Driver, b.serverName, "Could not close underlying socket: %v", err)
+		b.log.Warnf(log.Driver, b.serverName, "could not close underlying socket")
 	}
 }
 

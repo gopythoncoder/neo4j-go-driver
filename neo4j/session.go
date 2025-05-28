@@ -71,7 +71,7 @@ func (s *session) BeginTransaction(configurers ...func(*TransactionConfig)) (Tra
 	if err != nil {
 		return nil, err
 	}
-	return tx.legacy(), nil
+	return tx.Legacy(), nil
 }
 
 func (s *session) ReadTransaction(
@@ -110,7 +110,7 @@ func (s *session) Close() error {
 
 func transactionWorkBridge(work TransactionWork) ManagedTransactionWork {
 	return func(txc ManagedTransaction) (any, error) {
-		return work(txc.legacy())
+		return work(txc.Legacy())
 	}
 }
 

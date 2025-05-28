@@ -20,10 +20,11 @@ package config
 import (
 	"crypto/tls"
 	"crypto/x509"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/auth"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/notifications"
 	"time"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/auth"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/log"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/notifications"
 )
 
 // A Config contains options that can be used to customize certain

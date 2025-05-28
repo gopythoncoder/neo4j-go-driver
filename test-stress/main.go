@@ -26,7 +26,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j"
 )
 
 const TestNumberOfGoRoutines = 20

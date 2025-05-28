@@ -24,10 +24,10 @@ import (
 	"io"
 	"testing"
 
-	iauth "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	iauth "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/auth"
+	idb "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	. "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/log"
 )
 
 var logger = log.ToVoid()

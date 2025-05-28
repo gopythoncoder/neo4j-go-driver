@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/db"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/log"
 )
 
 type messageQueue struct {

@@ -18,11 +18,12 @@
 package collections_test
 
 import (
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/collections"
 	"math"
 	"math/rand"
 	"testing"
 	"testing/quick"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/collections"
 )
 
 func TestSet(outer *testing.T) {

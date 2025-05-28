@@ -82,7 +82,7 @@ func (d *driver) Target() url.URL {
 }
 
 func (d *driver) NewSession(config SessionConfig) Session {
-	return d.delegate.NewSession(context.Background(), config).legacy()
+	return d.delegate.NewSession(context.Background(), config).Legacy()
 }
 
 func (d *driver) VerifyConnectivity() error {

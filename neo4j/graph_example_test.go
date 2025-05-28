@@ -20,7 +20,8 @@ package neo4j_test
 import (
 	"context"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j"
 )
 
 func ExampleGetProperty() {

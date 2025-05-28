@@ -18,13 +18,14 @@
 package neo4j
 
 import (
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/config"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/bolt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/pool"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/notifications"
 	"math"
 	"net/url"
 	"time"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/config"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/bolt"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/pool"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/notifications"
 )
 
 // Deprecated: please use config.Config directly. This alias will be removed in 6.0.

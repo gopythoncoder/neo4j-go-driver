@@ -18,9 +18,9 @@
 package bolt
 
 import (
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/notifications"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/db"
+	idb "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/notifications"
 )
 
 func checkNotificationFiltering(

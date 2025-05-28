@@ -25,9 +25,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/db"
+	idb "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	. "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/testutil"
 )
 
 func TestResultGo1_23(outer *testing.T) {

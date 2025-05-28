@@ -20,8 +20,9 @@ package neo4j
 import (
 	"context"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/notifications"
 	"os"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/notifications"
 )
 
 func ExampleConfig_disableNoCategories() {

@@ -21,13 +21,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
 	"net/url"
 	"sync"
 	"sync/atomic"
 	"testing"
 	"time"
 	"unsafe"
+
+	. "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/testutil"
 )
 
 func TestDriverExecuteQuery(outer *testing.T) {
@@ -613,7 +614,7 @@ func (s *fakeSession) Close(context.Context) error {
 	return s.closeErr
 }
 
-func (s *fakeSession) legacy() Session {
+func (s *fakeSession) Legacy() Session {
 	panic("implement me")
 }
 
@@ -634,7 +635,7 @@ func (tx *fakeManagedTransaction) Run(context.Context, string, map[string]any) (
 	return tx.result, tx.err
 }
 
-func (tx *fakeManagedTransaction) legacy() Transaction {
+func (tx *fakeManagedTransaction) Legacy() Transaction {
 	panic("implement me")
 }
 
@@ -683,7 +684,7 @@ func (f *fakeResult) Record() *Record {
 	return f.nextRecords[f.nextIndex]
 }
 
-func (f *fakeResult) Records(context.Context) (func(yield func(*Record, error) bool)) {
+func (f *fakeResult) Records(context.Context) func(yield func(*Record, error) bool) {
 	panic("implement me")
 }
 

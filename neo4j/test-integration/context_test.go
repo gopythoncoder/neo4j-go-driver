@@ -19,9 +19,10 @@ package test_integration
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
 	"testing"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/test-integration/dbserver"
 )
 
 func TestContext(outer *testing.T) {

@@ -20,9 +20,10 @@ package main
 import (
 	"errors"
 	"fmt"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j"
 	"strconv"
 	"sync"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j"
 )
 
 type workloads struct {

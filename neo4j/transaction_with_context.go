@@ -19,8 +19,9 @@ package neo4j
 
 import (
 	"context"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/errorutil"
 )
 
 // ManagedTransaction represents a transaction managed by the driver and operated on by the user, via transaction functions
@@ -28,7 +29,7 @@ type ManagedTransaction interface {
 	// Run executes a statement on this transaction and returns a result
 	Run(ctx context.Context, cypher string, params map[string]any) (ResultWithContext, error)
 
-	legacy() Transaction
+	Legacy() Transaction
 }
 
 // ExplicitTransaction represents a transaction in the Neo4j database
@@ -49,7 +50,7 @@ type ExplicitTransaction interface {
 
 	// legacy returns the non-cancelling, legacy variant of this ExplicitTransaction type
 	// This is used so that legacy transaction functions can delegate work to their newer, context-aware variants
-	legacy() Transaction
+	Legacy() Transaction
 }
 
 type transactionState struct {
@@ -125,7 +126,7 @@ func (tx *explicitTransaction) Rollback(ctx context.Context) error {
 	return errorutil.WrapError(tx.txState.err)
 }
 
-func (tx *explicitTransaction) legacy() Transaction {
+func (tx *explicitTransaction) Legacy() Transaction {
 	return &transaction{
 		delegate: tx,
 	}
@@ -164,7 +165,7 @@ func (tx *managedTransaction) Close(context.Context) error {
 }
 
 // legacy interop only - remove in 6.0
-func (tx *managedTransaction) legacy() Transaction {
+func (tx *managedTransaction) Legacy() Transaction {
 	return &transaction{
 		delegate: tx,
 	}

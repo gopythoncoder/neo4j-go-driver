@@ -21,19 +21,20 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	iauth "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/auth"
-	idb "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/db"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/errorutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/homedb"
 	"io"
 	"reflect"
 	"sync"
 	"testing"
 	"time"
 
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/db"
-	. "github.com/neo4j/neo4j-go-driver/v5/neo4j/internal/testutil"
-	"github.com/neo4j/neo4j-go-driver/v5/neo4j/log"
+	iauth "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/auth"
+	idb "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/db"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/errorutil"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/homedb"
+
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/db"
+	. "github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/internal/testutil"
+	"github.com/gopythoncoder/neo4j-go-driver/v5/neo4j/log"
 )
 
 type transactionFunc func(context.Context, ManagedTransactionWork, ...func(*TransactionConfig)) (any, error)
